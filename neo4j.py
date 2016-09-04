@@ -6,14 +6,31 @@ keyword = gdb.labels.create("Keyword")
 
 datalist = split.datatransfer()
 
+fee = {}
+
+
 for data in datalist:
 	try:
-		if data["number"]== 1:
-			fee =datalist[datalist.index(data)+1]
-			name = gdb.nodes.create(name=data["name"], again=data["number"])
-			name2 = gdb.nodes.create(name=fee["name"], agein=fee["number"])			
-			keyword.add(name,name2)
-			name.relationships.create("once", name2)
+		fee[data["name"]]= gdb.nodes.create(name=data["name"], again=data["number"])	
+		keyword.add(fee[data["name"]])	
 	except:
-	print "Ups" 	
+		print "Ups" 
+
+
+for data in datalist:	
+	try:
+		fee[data["name"]].relationships.create("sonra",fee[data["after"]] )
+	except:
+		print "Ups" 
+		
+
+'''	
+name.relationships.create("once", name2)
+
+try:
+		
+		
+except:
 	
+
+'''

@@ -14,6 +14,8 @@ def datalist():
 		item = item.encode('utf-8')
 		files.write(item +'\n' )
 
+	return "Yes"	
+
 def datatransfer():
 	text = open("testing.txt").read()
 	datalist=[]
@@ -39,7 +41,7 @@ def datatransfer():
 
 	return datalist
 
-
+datalist()
 
 
 

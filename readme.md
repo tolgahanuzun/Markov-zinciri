@@ -6,4 +6,4 @@
 
 ## Neo4j Use
 
-![Neo4j](/readme.png)
+![Neo4j](image/lorem.png)
